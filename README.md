@@ -1,1 +1,0 @@
-# frontend-base-project-react-native
