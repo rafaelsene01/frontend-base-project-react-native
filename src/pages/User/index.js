@@ -31,6 +31,7 @@ export default class User extends Component {
   state = {
     stars: [],
     loading: true,
+    refresh: false,
     page: 1,
   };
 
@@ -38,31 +39,41 @@ export default class User extends Component {
     this.loadPage();
   }
 
-  loadPage = async () => {
+  loadPage = async (page = 1) => {
     const { navigation } = this.props;
     const user = navigation.getParam('user');
-    const { page, stars } = this.state;
-    this.setState({ loading: true });
+    const { stars } = this.state;
+
+    if (page !== 1) this.setState({ loading: true });
 
     const response = await api.get(`/users/${user.login}/starred`, {
       params: { page },
     });
     this.setState({
       stars: page >= 2 ? [...stars, ...response.data] : response.data,
+      page,
       loading: false,
     });
   };
 
   loadMore = async () => {
     const { page } = this.state;
-    this.setState({ page: page + 1 });
+    const nextPage = page + 1;
 
-    this.loadPage();
+    this.loadPage(nextPage);
+  };
+
+  refreshList = async () => {
+    this.setState({ refresh: true });
+
+    await this.loadPage();
+
+    this.setState({ refresh: false });
   };
 
   render() {
     const { navigation } = this.props;
-    const { stars, loading } = this.state;
+    const { stars, loading, refresh } = this.state;
     const user = navigation.getParam('user');
     return (
       <Container>
@@ -86,6 +97,8 @@ export default class User extends Component {
           )}
           onEndReachedThreshold={0.2}
           onEndReached={this.loadMore}
+          onRefresh={this.refreshList}
+          refreshing={refresh}
         />
         {loading && <ActivityIndicator />}
       </Container>
