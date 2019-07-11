@@ -25,6 +25,7 @@ export default class User extends Component {
   static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
+      navigate: PropTypes.func,
     }).isRequired,
   };
 
@@ -71,6 +72,12 @@ export default class User extends Component {
     this.setState({ refresh: false });
   };
 
+  handleNavidate = item => {
+    const { navigation } = this.props;
+
+    navigation.navigate('Repository', { item });
+  };
+
   render() {
     const { navigation } = this.props;
     const { stars, loading, refresh } = this.state;
@@ -87,7 +94,7 @@ export default class User extends Component {
           data={stars}
           keyExtractor={star => String(star.id)}
           renderItem={({ item }) => (
-            <Starred>
+            <Starred onPress={() => this.handleNavidate(item)}>
               <OwnderAvatar source={{ uri: item.owner.avatar_url }} />
               <Info>
                 <Title>{item.name}</Title>

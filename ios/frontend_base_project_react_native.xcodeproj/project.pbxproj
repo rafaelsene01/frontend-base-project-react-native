@@ -60,6 +60,7 @@
 		F2E0AB47FFF24FFC8F9FB09B /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FA9C2AFED4E4FAEAC0146A7 /* SimpleLineIcons.ttf */; };
 		E459887199EB4468B1703668 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA633888195341458290BC4A /* Zocial.ttf */; };
 		B7EB744C10544123A3919349 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A852223ADCBC4A849769EA9C /* libRNCAsyncStorage.a */; };
+		806DCE72A67C47BDB83AC638 /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC36FECACC74EDD9C427AD8 /* libRNCWebView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -391,6 +392,8 @@
 		AA633888195341458290BC4A /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		587EE588E63A42F9A626DD44 /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; name = "RNCAsyncStorage.xcodeproj"; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		A852223ADCBC4A849769EA9C /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; name = "libRNCAsyncStorage.a"; path = "libRNCAsyncStorage.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		E5D03B61E6B54C0CB8D9A6FA /* RNCWebView.xcodeproj */ = {isa = PBXFileReference; name = "RNCWebView.xcodeproj"; path = "../node_modules/react-native-webview/ios/RNCWebView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		9CC36FECACC74EDD9C427AD8 /* libRNCWebView.a */ = {isa = PBXFileReference; name = "libRNCWebView.a"; path = "libRNCWebView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +425,7 @@
 				59C536EC963A4196AAFF2548 /* libRNGestureHandler.a in Frameworks */,
 				4A9C7245BAB04FC28562D97B /* libRNVectorIcons.a in Frameworks */,
 				B7EB744C10544123A3919349 /* libRNCAsyncStorage.a in Frameworks */,
+				806DCE72A67C47BDB83AC638 /* libRNCWebView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +620,7 @@
 				14FA4BFAC5A44BC99C84E8F8 /* RNGestureHandler.xcodeproj */,
 				C12D7C348D644A8596F7D611 /* RNVectorIcons.xcodeproj */,
 				587EE588E63A42F9A626DD44 /* RNCAsyncStorage.xcodeproj */,
+				E5D03B61E6B54C0CB8D9A6FA /* RNCWebView.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1289,12 +1294,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Debug;
@@ -1321,12 +1328,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Release;
@@ -1352,6 +1361,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Debug;
@@ -1376,6 +1386,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Release;
@@ -1410,12 +1421,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Debug;
@@ -1450,12 +1463,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Release;
@@ -1489,12 +1504,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Debug;
@@ -1528,12 +1545,14 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)\..\node_modules\react-native-webview\ios",
 				);
 			};
 			name = Release;
